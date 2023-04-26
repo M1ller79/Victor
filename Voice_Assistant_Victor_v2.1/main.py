@@ -16,7 +16,6 @@ tts.va_speak("Здравствуйте. Это Виктор. Ваш голосо
 
 
 def va_respond(voice: str):
-    print('def va_respond начат')
     print(voice)
     if voice.startswith(config.VA_ALIAS):
         cmd = recognize_cmd(filter_cmd(voice))
@@ -24,11 +23,9 @@ def va_respond(voice: str):
             tts.va_speak('Я Вас не расслышал. Повторите пожалуйста')
         else:
             execute_cmd(cmd['cmd'])
-    print('def va_respond пройден')
 
 
 def filter_cmd(raw_voice: str):
-    print('def filter_cmd начат')
     cmd = raw_voice
 
     for x in config.VA_ALIAS:
@@ -36,12 +33,10 @@ def filter_cmd(raw_voice: str):
 
     for x in config.VA_TBR:
         cmd = cmd.replace(x, '').strip()
-    print('def filter_cmd пройден')
     return cmd
 
 
 def recognize_cmd(cmd: str):
-    print('def recognize_cmd начат')
     rc = {'cmd': '', 'percent': 0}
     for c, v in config.VA_CMD_LIST.items():
 
@@ -50,12 +45,10 @@ def recognize_cmd(cmd: str):
             if vrt > rc['percent']:
                 rc['cmd'] = c
                 rc['percent'] = vrt
-    print('def recognize_cmd пройден')
     return rc
 
 
 def execute_cmd(cmd: str):
-    print('def execute_cmd начат')
     if cmd == 'help':
         # help
         text = "Я умею: ..."
@@ -97,8 +90,7 @@ def execute_cmd(cmd: str):
 
     elif cmd == 'author':
         tts.va_speak('Меня создал человек с ником Миллер семьдесят девять')
-    print('def execute_cmd пройден')
 
 
-# Прослущивание команд
+# Прослушивание команд
 stt.va_listen(va_respond)
