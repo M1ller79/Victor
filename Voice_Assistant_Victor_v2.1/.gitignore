@@ -1,0 +1,21 @@
+# Виртуальное окружение
+.venv/
+venv/
+env/
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+
+# IDE
+.idea/
+.vscode/
+
+# Модели (большие файлы)
+models/
+*.pt
+small_voice_model/
+
+# Личное
+*.log
+.env
