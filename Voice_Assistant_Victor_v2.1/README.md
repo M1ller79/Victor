@@ -18,26 +18,26 @@
 
 The project demonstrates skills in **audio processing**, **speech recognition and synthesis**, **fuzzy string matching**, and **integration with external services** (weather, music, browser).
 
-> "Victor" is not just a script — it's a full-fledged assistant that can listen, understand, and act.
+> "Victor" is not just a script - it's a full-fledged assistant that can listen, understand, and act.
 
 ---
 
 ## 🚀 Features
 
-- **🎙️ Speech Recognition (STT)** — powered by **Vosk** (offline, no internet required).
-- **🔊 Speech Synthesis (TTS)** — powered by **Silero** (natural voice, model `v3_1_ru`).
-- **🧠 Fuzzy Command Matching** — `fuzzywuzzy` (`fuzz.ratio`) identifies commands even with recognition errors.
-- **🔢 Number-to-Text Conversion** — `num2t4ru` is used to announce the time.
+- **🎙️ Speech Recognition (STT)** - powered by **Vosk** (offline, no internet required).
+- **🔊 Speech Synthesis (TTS)** - powered by **Silero** (natural voice, model `v3_1_ru`).
+- **🧠 Fuzzy Command Matching** - `fuzzywuzzy` (`fuzz.ratio`) identifies commands even with recognition errors.
+- **🔢 Number-to-Text Conversion** - `num2t4ru` is used to announce the time.
 - **🌐 Commands:**
-  - `music` — opens Yandex.Music in Chrome.
-  - `weather` — opens Yandex.Weather.
-  - `browser` — opens Yandex in Chrome.
-  - `time` — announces the current time (with number-to-text conversion).
-  - `joke` — tells a random joke from a list.
-  - `list of commands` — lists what the assistant can do.
-  - `author` — names the creator.
-  - `thank you` — responds with gratitude.
-- **💾 Portability** — can run from a USB flash drive (models are loaded locally).
+  - `music` - opens Yandex.Music in Chrome.
+  - `weather` - opens Yandex.Weather.
+  - `browser` - opens Yandex in Chrome.
+  - `time` - announces the current time (with number-to-text conversion).
+  - `joke` - tells a random joke from a list.
+  - `list of commands` - lists what the assistant can do.
+  - `author` - names the creator.
+  - `thank you` - responds with gratitude.
+- **💾 Portability** - can run from a USB flash drive (models are loaded locally).
 
 ---
 
@@ -79,7 +79,7 @@ pip install -r requirements.txt
 ```
 
 ### 4. Download models
-Vosk (STT): vosk-model-small-ru-0.22 — unzip into models/small_voice_model/
+Vosk (STT): vosk-model-small-ru-0.22 https://alphacephei.com/vosk/models - unzip into models/small_voice_model/
 
 Silero (TTS): https://github.com/snakers4/silero-models downloaded automatically on first run via torch.hub (or download model.pt manually and place it in the project root).
 
